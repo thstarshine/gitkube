@@ -160,7 +160,7 @@ do
             if [ "$RAW_BUILD_ARGS" != "null" ]; then
               for buildarg in $(echo "$RAW_BUILD_ARGS" | jq -c '.[]'); do
                   key=$(echo $buildarg | jq -r '.name')
-                  value=$(echo $buildarg | jq -r '.value')
+                  value=$(echo $buildarg | jq -r '.value' | envsubst)
                   BUILD_ARGS="$BUILD_ARGS --build-arg $key=\"$value\""
               done
             fi
