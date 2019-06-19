@@ -62,7 +62,7 @@ spec:
       - command:
         - bash
         - /sshd-lib/start_sshd.sh
-        image: thstarshine/gitkubed:ed25692
+        image: thstarshine/gitkubed:v0.3.1
         imagePullPolicy: IfNotPresent
         name: sshd
         ports:
@@ -122,7 +122,7 @@ spec:
     spec:
       serviceAccountName: gitkube
       containers:
-      - image: thstarshine/gitkube-controller:ed25692
+      - image: thstarshine/gitkube-controller:v0.3.1
         imagePullPolicy: IfNotPresent
         name: controller
         resources:
