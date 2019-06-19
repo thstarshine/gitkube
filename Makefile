@@ -8,7 +8,7 @@ GITKUBED_DIR ?= "build/gitkubed"
 SETUP_MANIFEST_FILE ?= "manifests/gitkube-setup.yaml"
 
 PWD := $(shell pwd)
-VERSION := $(shell hack/get-version.sh)
+VERSION := "v0.3.1"
 
 build-controller:
 	docker build -t $(CONTROLLER_IMAGE):$(VERSION) .
