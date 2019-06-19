@@ -33,7 +33,7 @@ gitkubed: build-gitkubed push-gitkubed
 # build cli locally, for all given platform/arch
 build-cli:
 	go get github.com/mitchellh/gox
-	gox -ldflags "-X github.com/hasura/gitkube/pkg/cmd.version=$(VERSION)" \
+	gox -ldflags "-X github.com/thstarshine/gitkube/pkg/cmd.version=$(VERSION)" \
 	-os="linux darwin windows" \
 	-arch="amd64" \
 	-output="_output/$(VERSION)/gitkube_{{.OS}}_{{.Arch}}" \
