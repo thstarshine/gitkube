@@ -1,5 +1,5 @@
 # set constants
-IMAGE_REGISTRY ?= "hasura"
+IMAGE_REGISTRY ?= "thstarshine"
 CONTROLLER_IMAGE_NAME ?= "gitkube-controller"
 CONTROLLER_IMAGE ?= "$(IMAGE_REGISTRY)/$(CONTROLLER_IMAGE_NAME)"
 GITKUBED_IMAGE_NAME ?= "gitkubed"
