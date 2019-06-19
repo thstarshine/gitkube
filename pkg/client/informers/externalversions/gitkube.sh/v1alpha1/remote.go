@@ -21,10 +21,10 @@ package v1alpha1
 import (
 	time "time"
 
-	gitkubeshv1alpha1 "github.com/hasura/gitkube/pkg/apis/gitkube.sh/v1alpha1"
-	versioned "github.com/hasura/gitkube/pkg/client/clientset/versioned"
-	internalinterfaces "github.com/hasura/gitkube/pkg/client/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/hasura/gitkube/pkg/client/listers/gitkube.sh/v1alpha1"
+	gitkubeshv1alpha1 "github.com/thstarshine/gitkube/pkg/apis/gitkube.sh/v1alpha1"
+	versioned "github.com/thstarshine/gitkube/pkg/client/clientset/versioned"
+	internalinterfaces "github.com/thstarshine/gitkube/pkg/client/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/thstarshine/gitkube/pkg/client/listers/gitkube.sh/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

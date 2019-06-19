@@ -22,8 +22,8 @@ GITKUBE_NAMESPACE_STRING="namespace: kube-system"
 TEST_NAMESPACE_STRING="namespace: default"
 
 # change to HTTPS url when repo is made public
-# GITKUBE_EXAMPLE_REPO="https://github.com/hasura/gitkube-example"
-GITKUBE_EXAMPLE_REPO="git@github.com:hasura/gitkube-example.git"
+# GITKUBE_EXAMPLE_REPO="https://github.com/thstarshine/gitkube-example"
+GITKUBE_EXAMPLE_REPO="git@github.com:thstarshine/gitkube-example.git"
 
 
 # check if the system has the given command

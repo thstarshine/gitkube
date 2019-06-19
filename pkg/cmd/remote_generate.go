@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/ghodss/yaml"
-	"github.com/hasura/gitkube/pkg/apis/gitkube.sh/v1alpha1"
+	"github.com/thstarshine/gitkube/pkg/apis/gitkube.sh/v1alpha1"
 	"github.com/manifoldco/promptui"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

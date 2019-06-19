@@ -7,7 +7,7 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 
 	// enable gcp auth provider
-	gitkubeCS "github.com/hasura/gitkube/pkg/client/clientset/versioned"
+	gitkubeCS "github.com/thstarshine/gitkube/pkg/client/clientset/versioned"
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 )

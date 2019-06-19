@@ -43,7 +43,7 @@ build-cli:
 build-cli-in-docker:
 	docker build -t gitkube-cli-builder -f build/cli-builder.dockerfile build
 	docker run --rm -it \
-	-v $(PWD):/go/src/github.com/hasura/gitkube \
+	-v $(PWD):/go/src/github.com/thstarshine/gitkube \
 	gitkube-cli-builder \
 	make build-cli
 

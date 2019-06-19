@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	api "github.com/hasura/gitkube/pkg/apis/gitkube.sh/v1alpha1"
+	api "github.com/thstarshine/gitkube/pkg/apis/gitkube.sh/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	extensionsv1beta1 "k8s.io/api/extensions/v1beta1"
 	rbacv1 "k8s.io/api/rbac/v1"
@@ -108,7 +108,7 @@ func newGitkubed(namespace string) extensionsv1beta1.Deployment {
 					Containers: []corev1.Container{
 						{
 							Name:  "sshd",
-							Image: "hasura/gitkubed:" + GetVersion(),
+							Image: "thstarshine/gitkubed:" + GetVersion(),
 							Command: []string{
 								"bash",
 								"/sshd-lib/start_sshd.sh",
@@ -224,7 +224,7 @@ func newGitkubeController(namespace string) extensionsv1beta1.Deployment {
 					Containers: []corev1.Container{
 						{
 							Name:            "sshd",
-							Image:           "hasura/gitkube-controller:" + GetVersion(),
+							Image:           "thstarshine/gitkube-controller:" + GetVersion(),
 							ImagePullPolicy: corev1.PullIfNotPresent,
 							Resources: corev1.ResourceRequirements{
 								Requests: corev1.ResourceList{

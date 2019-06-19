@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/hasura/gitkube/pkg/apis/gitkube.sh/v1alpha1"
-	gitkubescheme "github.com/hasura/gitkube/pkg/client/clientset/versioned/scheme"
+	"github.com/thstarshine/gitkube/pkg/apis/gitkube.sh/v1alpha1"
+	gitkubescheme "github.com/thstarshine/gitkube/pkg/client/clientset/versioned/scheme"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

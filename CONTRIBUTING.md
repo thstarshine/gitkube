@@ -22,7 +22,7 @@ $ cd gitkube
 For pulling changes from upstream, run this remote command:
 
 ```sh
-$ git remote add upstream https://github.com/hasura/gitkube.git
+$ git remote add upstream https://github.com/thstarshine/gitkube.git
 ```
 
 ## Make changes, build and push

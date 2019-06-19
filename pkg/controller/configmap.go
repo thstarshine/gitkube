@@ -5,7 +5,7 @@ import (
 
 	l "github.com/sirupsen/logrus"
 
-	"github.com/hasura/gitkube/pkg/controller/util"
+	"github.com/thstarshine/gitkube/pkg/controller/util"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/runtime"

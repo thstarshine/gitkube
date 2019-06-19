@@ -24,7 +24,7 @@ $ kubectl --namespace kube-system expose deployment gitkubed --type=NodePort --n
 
 ## Example workflow
 
-Follow the example here for a typical workflow: https://github.com/hasura/gitkube-example
+Follow the example here for a typical workflow: https://github.com/thstarshine/gitkube-example
 
 After finishing the Remote resource creation step as per the example repo, please read the following notes:
 

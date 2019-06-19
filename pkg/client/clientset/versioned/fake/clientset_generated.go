@@ -19,9 +19,9 @@
 package fake
 
 import (
-	clientset "github.com/hasura/gitkube/pkg/client/clientset/versioned"
-	gitkubev1alpha1 "github.com/hasura/gitkube/pkg/client/clientset/versioned/typed/gitkube.sh/v1alpha1"
-	fakegitkubev1alpha1 "github.com/hasura/gitkube/pkg/client/clientset/versioned/typed/gitkube.sh/v1alpha1/fake"
+	clientset "github.com/thstarshine/gitkube/pkg/client/clientset/versioned"
+	gitkubev1alpha1 "github.com/thstarshine/gitkube/pkg/client/clientset/versioned/typed/gitkube.sh/v1alpha1"
+	fakegitkubev1alpha1 "github.com/thstarshine/gitkube/pkg/client/clientset/versioned/typed/gitkube.sh/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

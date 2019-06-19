@@ -4,4 +4,4 @@ FROM golang:1.10
 RUN go get github.com/mitchellh/gox
 
 # setup the working directory
-WORKDIR /go/src/github.com/hasura/gitkube
+WORKDIR /go/src/github.com/thstarshine/gitkube

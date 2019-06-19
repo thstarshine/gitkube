@@ -18,6 +18,6 @@
 SCRIPT_ROOT=$(dirname ${BASH_SOURCE})/..
 
 $SCRIPT_ROOT/vendor/k8s.io/code-generator/generate-groups.sh "deepcopy,client,informer,lister" \
-github.com/hasura/gitkube/pkg/client github.com/hasura/gitkube/pkg/apis \
+github.com/thstarshine/gitkube/pkg/client github.com/thstarshine/gitkube/pkg/apis \
 gitkube.sh:v1alpha1 \
 --go-header-file $SCRIPT_ROOT/hack/boilerplate.go.txt

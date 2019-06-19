@@ -9,7 +9,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/client-go/tools/cache"
 
-	util "github.com/hasura/gitkube/pkg/controller/util"
+	util "github.com/thstarshine/gitkube/pkg/controller/util"
 )
 
 func (c *GitController) remoteEnqueue(obj interface{}) {

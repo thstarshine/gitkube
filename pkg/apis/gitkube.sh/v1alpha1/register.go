@@ -5,7 +5,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	gitkubesh "github.com/hasura/gitkube/pkg/apis/gitkube.sh"
+	gitkubesh "github.com/thstarshine/gitkube/pkg/apis/gitkube.sh"
 )
 
 // SchemeGroupVersion is group version used to register these objects

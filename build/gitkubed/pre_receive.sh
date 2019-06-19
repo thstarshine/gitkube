@@ -78,7 +78,7 @@ do
     echo "Checking out '${DEPLOY_BRANCH}:${DEPLOY_NEWREV}' to '${BUILD_ROOT}'"
     git archive $DEPLOY_NEWREV | tar -x -C $BUILD_ROOT
 
-#    export PRE_BUILD_HOOK="${BUILD_ROOT}/.hasura/pre-build"
+#    export PRE_BUILD_HOOK="${BUILD_ROOT}/.thstarshine/pre-build"
 #
 #    if [ -f $PRE_BUILD_HOOK ]; then
 #        echo

@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/hasura/gitkube/pkg/cmd"
+	"github.com/thstarshine/gitkube/pkg/cmd"
 	log "github.com/sirupsen/logrus"
 )
 

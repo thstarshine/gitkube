@@ -28,10 +28,10 @@ import (
 	// Uncomment the following line to load the gcp plugin (only required to authenticate against GKE clusters).
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 
-	clientset "github.com/hasura/gitkube/pkg/client/clientset/versioned"
-	informers "github.com/hasura/gitkube/pkg/client/informers/externalversions"
-	controller "github.com/hasura/gitkube/pkg/controller"
-	"github.com/hasura/gitkube/pkg/signals"
+	clientset "github.com/thstarshine/gitkube/pkg/client/clientset/versioned"
+	informers "github.com/thstarshine/gitkube/pkg/client/informers/externalversions"
+	controller "github.com/thstarshine/gitkube/pkg/controller"
+	"github.com/thstarshine/gitkube/pkg/signals"
 )
 
 var (

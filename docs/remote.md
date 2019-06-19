@@ -23,7 +23,7 @@ spec:
         name: username
         value: janedoe
 
-# Provide registry details: https://github.com/hasura/gitkube/blob/master/docs/registry.md
+# Provide registry details: https://github.com/thstarshine/gitkube/blob/master/docs/registry.md
   registry:
     url: "docker.io/user"
     credentials:

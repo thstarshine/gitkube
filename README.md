@@ -7,9 +7,9 @@ Gitkube is a tool for building and deploying Docker images on Kubernetes using `
 
 After a simple initial setup, users can simply keep `git push`-ing their repos to build and deploy to Kubernetes automatically.
 
-[![GoDoc](https://godoc.org/github.com/hasura/gitkube?status.svg)](https://godoc.org/github.com/hasura/gitkube) 
+[![GoDoc](https://godoc.org/github.com/thstarshine/gitkube?status.svg)](https://godoc.org/github.com/thstarshine/gitkube) 
 
-![Gitkube](https://raw.githubusercontent.com/hasura/gitkube/master/artifacts/gitkube.gif)
+![Gitkube](https://raw.githubusercontent.com/thstarshine/gitkube/master/artifacts/gitkube.gif)
 
 ## When should I use gitkube?
 1. Ideal for development where you can push your WIP branch to the cluster to test.
@@ -25,7 +25,7 @@ After a simple initial setup, users can simply keep `git push`-ing their repos t
 
 ## Getting started
 
-Gitkube will run on any Kubernetes vendor/distribution AS IS. In case you find any difficulties in the setup, please comment on [#33](https://github.com/hasura/gitkube/issues/33) 
+Gitkube will run on any Kubernetes vendor/distribution AS IS. In case you find any difficulties in the setup, please comment on [#33](https://github.com/thstarshine/gitkube/issues/33) 
 
 #### Install gitkube
 
@@ -43,13 +43,13 @@ kubectl --namespace kube-system expose deployment gitkubed --type=LoadBalancer -
 1. Install Gitkube CLI:
    - Linux/MacOS
    ``` bash
-   curl https://raw.githubusercontent.com/hasura/gitkube/master/gimme.sh | bash
+   curl https://raw.githubusercontent.com/thstarshine/gitkube/master/gimme.sh | bash
    ```
    - Windows (using [scoop](https://scoop.sh))
    ```bat
    scoop install gitkube
    ```
-   Or download the latest [release](https://github.com/hasura/gitkube/releases) and add it to your `PATH`.
+   Or download the latest [release](https://github.com/thstarshine/gitkube/releases) and add it to your `PATH`.
 
 2. Use Gitkube CLI to install Gitkube on the cluster:
    ```bash
@@ -65,7 +65,7 @@ The above installation steps work on most Kubernetes clusters. Detailed walkthro
 | minikube        |[minikube](docs/minikube.md) |
 
 #### Example
-Follow this [example](https://github.com/hasura/gitkube-example) repo for a typical workflow of gitkube.
+Follow this [example](https://github.com/thstarshine/gitkube-example) repo for a typical workflow of gitkube.
 
 
 ## How it works
@@ -78,7 +78,7 @@ Gitkube has three components:
 
 ### High-level architecture
 
-![Architecture](https://raw.githubusercontent.com/hasura/gitkube/master/artifacts/gitkube-v0.1.png)
+![Architecture](https://raw.githubusercontent.com/thstarshine/gitkube/master/artifacts/gitkube-v0.1.png)
 
 ### Workflow
 - Local dev: User creates a base git repo for the application with Dockerfile and K8s deployment
@@ -108,7 +108,7 @@ spec:
   authorizedKeys:
   - "ssh-rsa your-ssh-public-key"
 
-# Provide registry details: https://github.com/hasura/gitkube/blob/master/docs/registry.md
+# Provide registry details: https://github.com/thstarshine/gitkube/blob/master/docs/registry.md
   registry:
     url: "docker.io/user"
     credentials:
@@ -151,8 +151,8 @@ $ git push sampleremote master
 
 Gitkube is open to evolution. Some of the features to be added in future include:  
 
-- Allowing all apps (daemonset, statefulset) to be deployed using `git push`. Current support is limited to deployments. [#19](https://github.com/hasura/gitkube/issues/19)
-- Allowing different git hooks to be integrated [#20](https://github.com/hasura/gitkube/issues/20)
+- Allowing all apps (daemonset, statefulset) to be deployed using `git push`. Current support is limited to deployments. [#19](https://github.com/thstarshine/gitkube/issues/19)
+- Allowing different git hooks to be integrated [#20](https://github.com/thstarshine/gitkube/issues/20)
 
 ## Contributing
 

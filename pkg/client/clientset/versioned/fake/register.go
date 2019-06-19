@@ -19,7 +19,7 @@
 package fake
 
 import (
-	gitkubev1alpha1 "github.com/hasura/gitkube/pkg/apis/gitkube.sh/v1alpha1"
+	gitkubev1alpha1 "github.com/thstarshine/gitkube/pkg/apis/gitkube.sh/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
