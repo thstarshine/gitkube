@@ -162,6 +162,8 @@ do
                   key=$(echo $buildarg | jq -r '.name')
                   value=$(echo $buildarg | jq -r '.value' | envsubst)
                   BUILD_ARGS="$BUILD_ARGS --build-arg $key=\"$value\""
+                  echo "build-args:"
+                  echo $BUILD_ARGS
               done
             fi
 

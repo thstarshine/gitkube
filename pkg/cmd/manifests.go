@@ -156,6 +156,11 @@ func newGitkubed(namespace string) extensionsv1beta1.Deployment {
 									Name:      CMName,
 									MountPath: "/sshd-conf",
 								},
+								{
+									Name:      "secret-volume",
+									MountPath: "/etc/secret-volume",
+									ReadOnly:  true,
+								},
 							},
 						},
 					},
@@ -184,6 +189,14 @@ func newGitkubed(namespace string) extensionsv1beta1.Deployment {
 										Name: CMName,
 									},
 									DefaultMode: int2ptr(420),
+								},
+							},
+						},
+						{
+							Name: "secret-volume",
+							VolumeSource: corev1.VolumeSource{
+								Secret: &corev1.SecretVolumeSource{
+									SecretName: "my-secret",
 								},
 							},
 						},
