@@ -3,7 +3,7 @@ MAINTAINER tiru@hasura.io
 
 # Install openssh server
 RUN apt-get update \
- && apt-get install -y upx-ucl binutils curl openssh-server git jq \
+ && apt-get install -y upx-ucl binutils curl openssh-server git jq gettext-base \
  && curl -o /tmp/docker-18.06 'https://download.docker.com/linux/static/stable/x86_64/docker-18.06.1-ce.tgz' \
  && tar -xf /tmp/docker-18.06 -C /tmp \
  && mv /tmp/docker/docker /bin/docker \
@@ -25,6 +25,7 @@ RUN apt-get update \
  && curl -o /usr/bin/mo 'https://raw.githubusercontent.com/tests-always-included/mo/master/mo' \
  && chmod a+x /usr/bin/mo \
  && apt-get purge -y --auto-remove upx-ucl binutils \
+ && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
 # sshd config
