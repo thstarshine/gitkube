@@ -11,7 +11,7 @@ RUN apt-get update \
  && strip --strip-unneeded /bin/docker \
  && chmod a+x /bin/docker \
  && upx /bin/docker \
- && curl -o /bin/kubectl 'https://storage.googleapis.com/kubernetes-release/release/v1.8.7/bin/linux/amd64/kubectl' \
+ && curl -o /bin/kubectl 'https://storage.googleapis.com/kubernetes-release/release/v1.14.3/bin/linux/amd64/kubectl' \
  && strip --strip-unneeded /bin/kubectl \
  && chmod a+x /bin/kubectl \
  && upx /bin/kubectl \
