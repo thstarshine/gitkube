@@ -156,10 +156,12 @@ do
             DEPL_DOCKER_FILE_PATH=$(echo $DEPL_OPTS | jq -c -r --arg i $IMAGE_NAME '.[$i].dockerfile')
             NO_CACHE=$(echo $DEPL_OPTS | jq -c -r --arg i $IMAGE_NAME '.[$i].noCache')
             RAW_BUILD_ARGS=$(echo $DEPL_OPTS | jq -c -r --arg i $IMAGE_NAME '.[$i].buildArgs')
+            echo $RAW_BUILD_ARGS
             BUILD_ARGS=""
 
             if [ "$RAW_BUILD_ARGS" != "null" ]; then
               for buildarg in $(echo "$RAW_BUILD_ARGS" | jq -c '.[]'); do
+                  echo $buildarg
                   key=$(echo $buildarg | jq -r '.name')
                   value=$(echo $buildarg | jq -r '.value' | envsubst)
                   BUILD_ARGS="$BUILD_ARGS --build-arg $key=\"$value\""
