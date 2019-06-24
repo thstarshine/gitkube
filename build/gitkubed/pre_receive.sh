@@ -139,6 +139,7 @@ do
         export DEPLOYMENT_NAME=$(echo $Q_DEPLOYMENT_NAME | cut -d '.' -f 2)
 
         echo "Building Docker image for : ${DEPLOYMENT_NAME}"
+        echo "===============My Build================"
 
         DEPL_OPTS=$(echo ${REPO_OPTS} | jq -c --arg d $Q_DEPLOYMENT_NAME '.[$d]')
         DOCKER_IMAGES=$(echo ${DEPL_OPTS} | jq -c 'keys' | jq -r '.[]')
