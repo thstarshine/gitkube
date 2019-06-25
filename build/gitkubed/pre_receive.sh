@@ -160,14 +160,15 @@ do
             BUILD_ARGS=""
 
             if [ "$RAW_BUILD_ARGS" != "null" ]; then
-              for buildarg in "$(echo "$RAW_BUILD_ARGS" | jq -c '.[]')"; do
-                  echo $buildarg
-                  key=$(echo $buildarg | jq -r '.name')
-                  value=$(echo $buildarg | jq -r '.value' | envsubst)
-                  BUILD_ARGS="$BUILD_ARGS --build-arg $key=\"$value\""
-                  echo "build-args:"
-                  echo $BUILD_ARGS
-              done
+                echo $RAW_BUILD_ARGS | jq -c '.[]' | while read buildarg; do
+                    echo $buildarg
+                    key=$(echo $buildarg | jq -r '.name')
+                    value=$(echo $buildarg | jq -r '.value' | envsubst)
+                    echo $key
+                    echo $value
+                    echo "build-args:"
+                    echo $BUILD_ARGS
+                done
             fi
 
             # If dockerfile key is not present in the config, assume default
