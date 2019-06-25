@@ -200,6 +200,8 @@ do
                 NO_CACHE_ARGS="--no-cache"
             fi
             echo "Building Docker image : ${CUR_IMAGE}"
+            echo $(uname -a)
+            echo "docker build $NO_CACHE_ARGS -t "${CUR_IMAGE}" -f "${DOCKERFILE_PATH}" $BUILD_ARGS "${DOCKER_BUILD_CONTEXT}""
             docker build $NO_CACHE_ARGS -t "${CUR_IMAGE}" -f "${DOCKERFILE_PATH}" $BUILD_ARGS "${DOCKER_BUILD_CONTEXT}" || exit 1
             if [ -n "$REGISTRY_PREFIX" ]; then
                 echo "pushing ${CUR_IMAGE} to registry"
