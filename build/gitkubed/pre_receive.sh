@@ -161,14 +161,14 @@ do
 
             if [ "$RAW_BUILD_ARGS" != "null" ]; then
                 while read buildarg; do
-                    echo $buildarg
+                    #echo $buildarg
                     key=$(echo $buildarg | jq -r '.name')
                     value=$(echo $buildarg | jq -r '.value' | envsubst)
-                    echo $key
-                    echo $value
+                    #echo $key
+                    #echo $value
                     BUILD_ARGS="$BUILD_ARGS --build-arg $key=\"$value\""
-                    echo "build-args:"
-                    echo $BUILD_ARGS
+                    #echo "build-args:"
+                    #echo $BUILD_ARGS
                 done < <(echo $RAW_BUILD_ARGS | jq -c '.[]')
             fi
             echo "================="
@@ -205,7 +205,7 @@ do
             echo "Building Docker image : ${CUR_IMAGE}"
             echo $(uname -a)
             echo "docker build $NO_CACHE_ARGS -t "${CUR_IMAGE}" -f "${DOCKERFILE_PATH}" $BUILD_ARGS "${DOCKER_BUILD_CONTEXT}""
-            docker build $NO_CACHE_ARGS -t "${CUR_IMAGE}" -f "${DOCKERFILE_PATH}" $BUILD_ARGS "${DOCKER_BUILD_CONTEXT}" || exit 1
+            eval docker build $NO_CACHE_ARGS -t "${CUR_IMAGE}" -f "${DOCKERFILE_PATH}" $BUILD_ARGS "${DOCKER_BUILD_CONTEXT}" || exit 1
             if [ -n "$REGISTRY_PREFIX" ]; then
                 echo "pushing ${CUR_IMAGE} to registry"
                 docker push "${CUR_IMAGE}" || exit 1
