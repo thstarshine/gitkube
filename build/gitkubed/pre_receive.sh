@@ -160,7 +160,7 @@ do
             BUILD_ARGS=""
 
             if [ "$RAW_BUILD_ARGS" != "null" ]; then
-                echo $RAW_BUILD_ARGS | jq -c '.[]' | while read buildarg; do
+                while read buildarg; do
                     echo $buildarg
                     key=$(echo $buildarg | jq -r '.name')
                     value=$(echo $buildarg | jq -r '.value' | envsubst)
@@ -169,8 +169,11 @@ do
                     BUILD_ARGS="$BUILD_ARGS --build-arg $key=\"$value\""
                     echo "build-args:"
                     echo $BUILD_ARGS
-                done
+                done < <(echo $RAW_BUILD_ARGS | jq -c '.[]')
             fi
+            echo "================="
+            echo $BUILD_ARGS
+            echo "================="
 
             # If dockerfile key is not present in the config, assume default
             # Dockerfile in the context path
